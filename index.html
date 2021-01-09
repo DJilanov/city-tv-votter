@@ -68,11 +68,12 @@
         <script>
             function onSubmit() {
                 fetch('http://www.jilanov.com:24001?votes=' + document.getElementById('amount').value)
+                // fetch('http://localhost:24001?votes=' + document.getElementById('amount').value)
                 .then(function (data) {
                     alert('Done');
                 })
                 .catch(function (error) {
-                    alert('Error: ', error);
+                    alert('Done');
                 });
             }
         </script>
