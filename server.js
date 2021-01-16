@@ -7,7 +7,7 @@ console.log('Server started on port 2400');
 http.createServer(function (req, res) {
     const queryObject = url.parse(req.url,true).query;
     console.log(queryObject.votes);
-    runScript('./spammer.js', [queryObject.votes], function (err) {
+    runScript('./spammer.js', [queryObject.votes, queryObject.trackID], function (err) {
         if (err) throw err;
         console.log('finished running some-script.js');
     });

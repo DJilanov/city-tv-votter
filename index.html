@@ -47,6 +47,12 @@
                                         <label for="amount" class="">Amount of votes</label>
                                     </div>
                                     <!-- /.Basic textbox -->
+                                    <!-- Basic textbox -->
+                                    <div class="md-form">
+                                        <input type="text" id="trackID" class="form-control" value="50">
+                                        <label for="trackID" class="">Track ID</label>
+                                    </div>
+                                    <!-- /.Basic textbox -->
 
                                     <div class="text-xs-left">
                                         <button class="btn btn-primary" onclick="onSubmit()">Submit</button>
@@ -67,8 +73,8 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.1.1/js/mdb.min.js"></script>
         <script>
             function onSubmit() {
-                fetch('http://www.jilanov.com:24001?votes=' + document.getElementById('amount').value)
-                // fetch('http://localhost:24001?votes=' + document.getElementById('amount').value)
+                fetch('http://www.jilanov.com:24001?votes=' + document.getElementById('amount').value + '&trackID=' + document.getElementById('trackID').value)
+                // fetch('http://localhost:24001?votes=' + document.getElementById('amount').value + '&trackID=' + document.getElementById('trackID').value)
                 .then(function (data) {
                     alert('Done');
                 })
