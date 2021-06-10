@@ -73,8 +73,8 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.1.1/js/mdb.min.js"></script>
         <script>
             function onSubmit() {
-                fetch('http://www.jilanov.com:24001?votes=' + document.getElementById('amount').value + '&trackID=' + document.getElementById('trackID').value)
-                // fetch('http://localhost:24001?votes=' + document.getElementById('amount').value + '&trackID=' + document.getElementById('trackID').value)
+                // fetch('http://www.jilanov.com:24001?votes=' + document.getElementById('amount').value + '&trackID=' + document.getElementById('trackID').value)
+                fetch('http://localhost:24001?votes=' + document.getElementById('amount').value + '&trackID=' + document.getElementById('trackID').value)
                 .then(function (data) {
                     alert('Done');
                 })
