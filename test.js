@@ -2,12 +2,12 @@ const fetch = require('node-fetch');
 const http = require('http');
 const fs = require('fs');
 const util = require('util');
-const log_file = fs.createWriteStream(__dirname + '/log_debug.log', {flags : 'w'});
 const data_file = fs.createWriteStream(__dirname + '/log_data.log', {flags : 'w'});
-const tried_file = fs.createWriteStream(__dirname + '/log_tried.log', {flags : 'w'});
 
 const fetchDay = (year, month, day) => {
     let date = '' + year + '' + (month > 9 ? month.toString() : ('0' + month)) + (day > 9 ? day.toString() : ('0' + day));
+    const tried_file = fs.createWriteStream(__dirname + '/log_tried' + date + '.log', {flags : 'w'});
+    const log_file = fs.createWriteStream(__dirname + '/log_debug' + date + '.log', {flags : 'w'});
     date = date * 10000;
     console.log('Start date: ', date)
     for(let i = 0; i < 10000; i++) {
