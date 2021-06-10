@@ -53,7 +53,7 @@ const fetchDay = (year, month, day) => {
                     }
                     log_file.write(('Failed: ' +  (date + i) + ' ERR: ' + JSON.stringify(err)) + '\n');
                 });
-        }, 10 * i);
+        }, 5 * i);
     }
 }
 
